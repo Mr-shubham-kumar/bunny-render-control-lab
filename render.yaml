@@ -1,0 +1,11 @@
+services:
+  - type: web_service
+    name: bunny-render-control-lab
+    runtime: python
+    plan: free
+    repo: https://github.com/Mr-shubham-kumar/bunny-render-control-lab
+    branch: main
+    buildCommand: python -m py_compile app.py
+    startCommand: python app.py
+    healthCheckPath: /healthz
+    autoDeploy: false
